@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6CX-Hn-uhS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome Page View Controller-->
+        <scene sceneID="DJi-Jf-6aV">
+            <objects>
+                <viewController id="6CX-Hn-uhS" customClass="WelcomePageViewController" customModule="WeiboCoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9E6-Jy-gUL"/>
+                        <viewControllerLayoutGuide type="bottom" id="POK-aP-Ttr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UQr-kT-IQo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FirstPage.png" translatesAutoresizingMaskIntoConstraints="NO" id="YUZ-C4-T69">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="kuQ-Im-IEd" kind="modal" identifier="autherSegue" id="S99-rw-BvX"/>
+                        <segue destination="0eH-3A-F3j" kind="modal" identifier="mainSegue" id="2RY-Sz-mm6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qu4-SS-E5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5176" y="-2165"/>
+        </scene>
+        <!--Auther Page View Controller-->
+        <scene sceneID="gox-UM-otj">
+            <objects>
+                <viewController storyboardIdentifier="autherStoryboard" id="kuQ-Im-IEd" customClass="AutherPageViewController" customModule="WeiboCoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gzR-hD-4Ck"/>
+                        <viewControllerLayoutGuide type="bottom" id="43S-wy-raW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="obm-nR-ob3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSD-5N-5mP">
+                                <rect key="frame" x="0.0" y="-8" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pU9-XH-1HA"/>
+                    <connections>
+                        <outlet property="authWebView" destination="vSD-5N-5mP" id="hcg-XK-JYg"/>
+                        <segue destination="0eH-3A-F3j" kind="modal" identifier="mainSegue" id="PTF-nP-cYe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcY-be-mSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4516" y="-2555"/>
+        </scene>
+        <!--Write Weibo View Controller-->
+        <scene sceneID="xYC-oF-cFG">
+            <objects>
+                <viewController storyboardIdentifier="WriteWeibo" id="hV7-Vv-s7P" customClass="WriteWeiboViewController" customModule="WeiboCoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="80P-Jp-RHe"/>
+                        <viewControllerLayoutGuide type="bottom" id="ggy-Yr-768"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uN5-bw-ApQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BG4-9C-0Pd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="439"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aGE-ze-XY0"/>
+                    <connections>
+                        <outlet property="weiboTextView" destination="BG4-9C-0Pd" id="u7k-fD-g8m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zO-u3-wKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3181" y="-2385"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="gY6-Hp-z8F">
+            <objects>
+                <tableViewController id="U4R-6W-iv0" customClass="WeiboTableViewController" customModule="WeiboCoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="F41-TQ-kq0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="U4R-6W-iv0" id="AdX-aQ-7J4"/>
+                            <outlet property="delegate" destination="U4R-6W-iv0" id="Yc7-9U-Lbs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="O9L-hE-zjb"/>
+                    <connections>
+                        <segue destination="hV7-Vv-s7P" kind="push" identifier="WWB" id="FTw-WL-Pmh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="03f-oO-nHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3630" y="-2385"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="0gS-Bs-GP8">
+            <objects>
+                <navigationController id="TCd-bj-oy9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" id="ebt-hr-yk9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9eS-Aq-DIr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U4R-6W-iv0" kind="relationship" relationship="rootViewController" id="Hcv-pC-6B5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMP-nn-RId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4074" y="-2385"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pYF-el-Acd">
+            <objects>
+                <tabBarController storyboardIdentifier="mainStoryboard" modalTransitionStyle="crossDissolve" id="0eH-3A-F3j" customClass="TabBarController" customModule="WeiboCoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Fd-w7-dox"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="HMW-gR-9fS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TCd-bj-oy9" kind="relationship" relationship="viewControllers" id="pXB-n4-pOi"/>
+                        <segue destination="G99-8c-en2" kind="relationship" relationship="viewControllers" id="bFS-71-lTf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAb-Ua-Kla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4516" y="-1717"/>
+        </scene>
+        <!--热门-->
+        <scene sceneID="9gb-10-4vu">
+            <objects>
+                <tableViewController id="G99-8c-en2" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gR4-rS-lIT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReMen" id="6zS-zl-6Ah">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6zS-zl-6Ah" id="CTE-Fw-cZh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="G99-8c-en2" id="AFk-it-Wrh"/>
+                            <outlet property="delegate" destination="G99-8c-en2" id="IsR-vn-e3B"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="热门" id="8sC-51-DGO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVz-ci-YRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4055" y="-1557"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FirstPage.png" width="316" height="477"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="2RY-Sz-mm6"/>
+    </inferredMetricsTieBreakers>
+</document>
