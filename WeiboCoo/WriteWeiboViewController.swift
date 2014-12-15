@@ -15,12 +15,37 @@ class WriteWeiboViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var weiboTextView: UITextView!
     
     let access_token = "https://api.weibo.com/2/statuses/update.json"
+    var characterCount: UILabel!
     
     
     override func viewDidLoad() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "sendWeibo")
         self.weiboTextView.delegate = self
         self.weiboTextView.resignFirstResponder()
+        
+        self.navigationController?.toolbarHidden = false
+        setCustomToolBarItems()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.toolbarHidden = true
+    }
+    
+    // Set toolbar items
+    func setCustomToolBarItems() {
+        let photoIMG: UIImage! = UIImage(named: "photo25.png", inBundle: NSBundle.mainBundle(), compatibleWithTraitCollection: nil)
+        let photoBarItem = UIBarButtonItem(image: photoIMG, style: UIBarButtonItemStyle.Bordered, target: self, action: nil)
+        let characterCountWidth = self.view.frame.size.width - photoIMG.size.width
+        println("count width is: \(characterCountWidth)")
+        //characterCount.alignmentRectForFrame(CGRectMake(0, 0, self.view.frame.width, 25))
+        
+        characterCount = UILabel(frame: CGRectMake(5, 5, characterCountWidth, 20))
+        characterCount.clipsToBounds = true
+        characterCount.text = "140"
+        characterCount.textAlignment = NSTextAlignment.Right
+        
+        let characterCountBarButtonItem = UIBarButtonItem(customView: characterCount)
+        self.setToolbarItems([photoBarItem, characterCountBarButtonItem], animated: false)
     }
     
     //微博文字URLencode

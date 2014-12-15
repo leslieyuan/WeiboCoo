@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92222CB1A3F412200D0493F /* photo25.png in Resources */ = {isa = PBXBuildFile; fileRef = C92222CA1A3F412200D0493F /* photo25.png */; };
 		C9340DC11A028C5200C27058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9340DC01A028C5200C27058 /* AppDelegate.swift */; };
 		C9340DC41A028C5200C27058 /* WeiboCoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9340DC21A028C5200C27058 /* WeiboCoo.xcdatamodeld */; };
 		C9340DC61A028C5200C27058 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9340DC51A028C5200C27058 /* WelcomePageViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C92222CA1A3F412200D0493F /* photo25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo25.png; sourceTree = "<group>"; };
 		C9340DBB1A028C5200C27058 /* WeiboCoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiboCoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9340DBF1A028C5200C27058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9340DC01A028C5200C27058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		C9340DBE1A028C5200C27058 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C92222CA1A3F412200D0493F /* photo25.png */,
 				C9E6B9821A0BA98B00D1491F /* FirstPage.png */,
 				C99615461A1893650036818B /* Head.png */,
 				C9340DBF1A028C5200C27058 /* Info.plist */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9340DC91A028C5200C27058 /* Main.storyboard in Resources */,
+				C92222CB1A3F412200D0493F /* photo25.png in Resources */,
 				C9E6B9851A0BAFB800D1491F /* Token.plist in Resources */,
 				C99615451A188D480036818B /* WeiboCell.xib in Resources */,
 				C9E6B9831A0BA98B00D1491F /* FirstPage.png in Resources */,
