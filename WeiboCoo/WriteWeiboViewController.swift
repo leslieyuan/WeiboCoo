@@ -1,4 +1,4 @@
-//
+﻿//
 //  WriteWeiboViewController.swift
 //  WeiboCoo
 //
@@ -89,6 +89,11 @@ class WriteWeiboViewController: UIViewController, UITextViewDelegate{
     func textViewDidBeginEditing(textView: UITextView) {
         println("Start edit weibo")
         self.weiboTextView.becomeFirstResponder()
+        //Todo：self.toolBar.setFrame(CGFrameMake()) 移动toolbar到键盘顶端
     }
     
+    //统计剩余可输入字符数并显示在lable上
+    func textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+        characterCount.text = 140 - countElements(self.weiboTextView.text)
+    }
 }
